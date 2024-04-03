@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 - Catálogo de Plantas - Entrega 02.04.2024</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function salvar(){
+            let form= document.getElementById("cadastro")
+            let nome= form.nomeDaPlanta.value
+            let especie= form.especie.value
+            if(nome.trim() == ""){
+                alert("Preencha o nome da planta")
+                return false
+            }
+            if(especie.trim() == ""){
+                alert("Preencha a especie da planta")
+                return false
+            }
+            alert("Cadastrado realizado com sucesso")
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="imagem/imagem.jpeg" alt="muitas árvores em uma paisagem de floresta">
+    </header>
+    <form id="cadastro" onsubmit="return false">
+        <div class="linha">
+            <label>Nome da Planta:</label>
+            <input type="text" name="nomeDaPlanta" placeholder="Campo obrigatório">
+        </div>
+        <div class="linha">
+            <label>Espécie:</label>
+            <input type="text" name="especie" placeholder="Campo obrigatório">
+        </div>
+        <div class="linha">
+            <label>Altura máxima:</label>
+            <input type="number" name="altura" placeholder="Opcional">
+        </div>
+        <input type="submit" name="enviar" value="Cadastrar" onclick="salvar()">
+    </form>
+    
+</body>
+</html>
